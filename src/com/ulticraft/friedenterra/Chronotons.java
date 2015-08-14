@@ -1,5 +1,6 @@
 package com.ulticraft.friedenterra;
 
+import org.bukkit.Location;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import com.ulticraft.core.Title;
@@ -54,9 +55,11 @@ public class Chronotons
 		Title title = new Title(String.format(Info.CHRONOTON_GOT_TITLE, given), reason, 5, 30, 50);
 		title.send(player);
 		
-		player.playSound(player.getLocation(), Sound.AMBIENCE_THUNDER, 2.4f, 0.5f);
-		player.playSound(player.getLocation(), Sound.AMBIENCE_THUNDER, 3.0f, 3.0f);
-		player.playSound(player.getLocation(), Sound.AMBIENCE_THUNDER, 3.0f, 4.0f);
+		Location location = new Location(player.getWorld(), player.getLocation().getBlockX(), player.getLocation().getBlockY() + 35, player.getLocation().getBlockZ());
+		
+		player.playSound(location, Sound.AMBIENCE_THUNDER, 2.4f, 0.5f);
+		player.playSound(location, Sound.AMBIENCE_THUNDER, 3.0f, 3.0f);
+		player.playSound(location, Sound.AMBIENCE_THUNDER, 3.0f, 4.0f);
 	}
 	
 	public void takeChronotons(Player player, int chronotons, String reason)

@@ -1,3 +1,6 @@
 main: com.ulticraft.friedenterra.FriedenTerra
 name: FriedenTerra
 version: 1.0
+commands:
+  chronotons:
+    aliases: [chronoton, chrono]

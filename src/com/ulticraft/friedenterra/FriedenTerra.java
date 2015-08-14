@@ -1,14 +1,19 @@
 package com.ulticraft.friedenterra;
 
 import java.util.logging.Logger;
-import net.md_5.bungee.api.ChatColor;
+import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
+import com.ulticraft.core.PlayerUtils;
 
 public class FriedenTerra extends JavaPlugin
 {
 	private Logger logger;
 	private Chronotons chronotons;
 	private PlayerConfig playerConfig;
+	private PlayerUtils playerUtils;
+	private CommandBank commandBank;
 	
 	private boolean verbose;
 	
@@ -22,6 +27,8 @@ public class FriedenTerra extends JavaPlugin
 		
 		playerConfig = new PlayerConfig(this);
 		chronotons = new Chronotons(this);
+		playerUtils = new PlayerUtils(this);
+		commandBank = new CommandBank(this);
 	}
 	
 	@Override
@@ -32,6 +39,11 @@ public class FriedenTerra extends JavaPlugin
 			v("Saving ALL Playerdata!");
 			playerConfig.saveAll();
 		}
+	}
+	
+	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
+	{
+		return getCommandBank().fireCommand(sender, cmd.getName(), args);
 	}
 	
 	public void info(String msg)
@@ -60,6 +72,16 @@ public class FriedenTerra extends JavaPlugin
 	public PlayerConfig getPlayerConfig()
 	{
 		return playerConfig;
+	}
+	
+	public PlayerUtils getPlayerUtils()
+	{
+		return playerUtils;
+	}
+	
+	public CommandBank getCommandBank()
+	{
+		return commandBank;
 	}
 
 	public boolean isVerbose()
