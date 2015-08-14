@@ -2,7 +2,6 @@ package com.ulticraft.friedenterra;
 
 import java.util.logging.Logger;
 import net.md_5.bungee.api.ChatColor;
-import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class FriedenTerra extends JavaPlugin
