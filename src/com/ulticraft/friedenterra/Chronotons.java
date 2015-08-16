@@ -25,11 +25,6 @@ public class Chronotons
 		{
 			config.psetChronotons(player, chronotons);
 		}
-		
-		else
-		{
-			
-		}
 	}
 	
 	public boolean canSpend(Player player, int chronotons)

@@ -6,16 +6,16 @@ import com.ulticraft.friedenterra.FriedenTerra;
 
 public class PlayerUtils
 {
-	private FriedenTerra ft;
+	private FriedenTerra ulticraft;
 	
-	public PlayerUtils(FriedenTerra ft)
+	public PlayerUtils(FriedenTerra ulticraft)
 	{
-		this.ft = ft;
+		this.ulticraft = ulticraft;
 	}
 	
 	public Player findPlayer(String search)
 	{
-		for(Player i : ft.getServer().getOnlinePlayers())
+		for(Player i : ulticraft.getServer().getOnlinePlayers())
 		{
 			if(i.getName().toLowerCase().contains(search.toLowerCase()))
 			{
