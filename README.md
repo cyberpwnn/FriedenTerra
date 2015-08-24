@@ -5,7 +5,8 @@ Server Wrapper for FriedenTerra
 Currently, we are all working togeather to build the texturepacks in this project. If you have been selected to work on the project, only you and other selected texture-ers will have accepted pull requests that modify the texture directory
 ### Texture Collaborators
 * danielmills (cyberpwn)
-* MagmaticFT (MagmaticMC / Josh)
+* MagmaticMC (Josh)
+* ThePlanC (Plan_C)
 * Ratrone (Ratrone)
 
 ### Contributing
