@@ -6,6 +6,7 @@ Currently, we are all working togeather to build the texturepacks in this projec
 ### Texture Collaborators
 * danielmills (cyberpwn)
 * MagmaticFT (MagmaticMC / Josh)
+* Ratrone (Ratrone)
 
 ### Contributing
 To contribute, simply,
