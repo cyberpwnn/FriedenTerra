@@ -42,6 +42,7 @@ public class PlayerConfig implements Listener
 		}
 
 		File userfiles;
+		File muserfiles;
 		try
 		{
 			userfiles = new File(plugin.getDataFolder() + File.separator + "playerdata");
@@ -50,8 +51,15 @@ public class PlayerConfig implements Listener
 				plugin.v("Creating /Ulticraft/playerdata/");
 				userfiles.mkdirs();
 			}
+			
+			muserfiles = new File(plugin.getDataFolder() + File.separator + "resources");
+			if(!muserfiles.exists())
+			{
+				plugin.v("Creating /Ulticraft/resources/");
+				muserfiles.mkdirs();
+			}
 		}
-
+		
 		catch(SecurityException e)
 		{
 			userfiles = null;
